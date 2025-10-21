@@ -1,0 +1,4 @@
+- [x] Mettre à jour nav.html : Supprimer le lien "Équipe" du menu principal et mobile.
+- [x] Mettre à jour footer.html : Supprimer le lien "Équipe".
+- [x] Mettre à jour classes.html : Ajouter une liste déroulante en haut de la section formations, avec les deux options. Ajouter deux sections (divs) pour le contenu de chaque enseignement, en utilisant le contenu fourni. Utiliser JavaScript pour basculer la visibilité des sections en fonction de la sélection.
+- [x] Tester la page classes.html pour s'assurer que la liste déroulante fonctionne et que le contenu s'affiche correctement.

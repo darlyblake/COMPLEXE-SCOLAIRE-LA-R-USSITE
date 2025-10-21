@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez le Complexe Scolaire La Réussite à Owendo - Formulaire de contact, coordonnées et plan d'accès.">
+  <title>Contact - Complexe Scolaire La Réussite - Owendo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a',
+            secondary: '#2563eb',
+            accent: '#facc15'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .image-overlay {
+      background: linear-gradient(45deg, rgba(30, 58, 138, 0.8), rgba(37, 99, 235, 0.6));
+    }
+
+    .blurred-bg {
+      filter: blur(4px);
+      transform: scale(1.05);
+      animation: zoomInOut 15s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomInOut {
+      0% { transform: scale(1.05); }
+      100% { transform: scale(1.15); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Styles pour le formulaire */
+    .form-input {
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus {
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    /* Améliorations pour mobile */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .contact-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-blue-50 min-h-screen">
+    <nav class="glass-effect fixed w-full z-50 border-b border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="text-lg sm:text-2xl font-bold text-white">
+          COMPLEXE SCOLAIRE LA RÉUSSITE
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Ouvrir le menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <div id="menu" class="hidden md:flex md:items-center space-x-4">
+          <a href="index.html" class="text-white hover:text-accent px-3 py-2 text-sm font-medium transition-colors">Accueil</a>
+          <a href="about.html" class="text-white/80 hover:text-accent px-3 py-2 text-sm font-medium transition-colors">À propos</a>
+          <a href="classes.html" class="text-white/80 hover:text-accent px-3 py-2 text-sm font-medium transition-colors">Formations</a>
+          <a href="reglement.html" class="text-white/80 hover:text-accent px-3 py-2 text-sm font-medium transition-colors">Règlement</a>
+          <a href="contact.html" class="text-white/80 hover:text-accent px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden flex-col mt-4 space-y-2 text-center bg-primary/90 rounded-lg p-4 md:hidden">
+        <a href="index.html" class="block text-white hover:text-accent py-2 transition-colors">Accueil</a>
+        <a href="about.html" class="block text-white hover:text-accent py-2 transition-colors">À propos</a>
+        <a href="classes.html" class="block text-white hover:text-accent py-2 transition-colors">Formations</a>
+        <a href="reglement.html" class="block text-white hover:text-accent py-2 transition-colors">Règlement</a>
+        <a href="contact.html" class="block text-white hover:text-accent py-2 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <img src="assets/reussite-owendo.jpeg" alt="Complexe Scolaire La Réussite à Owendo"
+         class="absolute inset-0 w-full h-full object-cover blurred-bg opacity-80">
+
+    <div class="absolute inset-0 image-overlay"></div>
+
+    <div class="relative z-10 text-center text-white px-4 md:px-8 fade-in">
+      <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">
+        Nous <span class="text-accent">Contacter</span>
+      </h1>
+      <p class="text-lg md:text-2xl mb-8 max-w-2xl mx-auto text-white/90">
+        Une question ? Une inscription ? Nous sommes à votre écoute pour accompagner la réussite de votre enfant.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section Contact principale -->
+  <section class="py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Informations de contact -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Prenez contact avec nous</h2>
+            <p class="text-lg text-gray-600">
+              Notre équipe est à votre disposition pour répondre à toutes vos questions concernant 
+              les inscriptions, les programmes pédagogiques ou toute autre demande.
+            </p>
+          </div>
+
+          <!-- Cartes d'information -->
+          <div class="space-y-6">
+            <div class="contact-card bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-primary text-xl">📍</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">Notre adresse</h3>
+                  <p class="text-gray-600">Razel, Owendo<br>Province de l'Estuaire, Gabon</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-primary text-xl">📞</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">Téléphone</h3>
+                  <p class="text-gray-600">+241 94 74 10<br>+241 11 74 10 74</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-primary text-xl">📧</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                  <p class="text-gray-600">contact@reussite-owendo.com<br>direction@reussite-owendo.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-primary text-xl">🕒</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">Horaires d'ouverture</h3>
+                  <p class="text-gray-600">Lundi - Vendredi : 7h30 - 17h30<br>Samedi : 8h - 12h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h3>
+          <form id="contact-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="prenom" class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
+                <input type="text" id="prenom" name="prenom" required
+                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+              </div>
+              <div>
+                <label for="nom" class="block text-sm font-medium text-gray-700 mb-2">Nom *</label>
+                <input type="text" id="nom" name="nom" required
+                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+              <input type="email" id="email" name="email" required
+                     class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+            </div>
+
+            <div>
+              <label for="telephone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone"
+                     class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+            </div>
+
+            <div>
+              <label for="sujet" class="block text-sm font-medium text-gray-700 mb-2">Sujet *</label>
+              <select id="sujet" name="sujet" required
+                      class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                <option value="">Choisissez un sujet</option>
+                <option value="inscription">Demande d'inscription</option>
+                <option value="renseignement">Renseignement</option>
+                <option value="visite">Demande de visite</option>
+                <option value="partenariat">Partenariat</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+              <textarea id="message" name="message" rows="5" required
+                        class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"></textarea>
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-accent hover:bg-yellow-400 text-primary font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
+              Envoyer le message
+            </button>
+
+            <p class="text-sm text-gray-500 text-center">
+              * Champs obligatoires. Nous vous répondrons dans les plus brefs délais.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Carte et directions -->
+  <section class="py-12 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Comment nous trouver</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Situé au cœur d'Owendo, notre établissement est facilement accessible depuis Libreville et ses environs.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Carte -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-6 shadow-xl">
+          <div class="bg-gray-200 rounded-2xl h-80 flex items-center justify-center">
+            <div class="text-center text-gray-500">
+              <span class="text-4xl mb-4 block">🗺️</span>
+              <p>Carte interactive</p>
+              <p class="text-sm mt-2">Localisation: Razel, Owendo</p>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Directions</h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start">
+                <span class="text-primary mr-3">•</span>
+                Depuis Libreville : Prendre la route vers Owendo, sortie Razel
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3">•</span>
+                Transport en commun : Lignes de bus 12, 15 et 18
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3">•</span>
+                Parking visiteurs disponible sur place
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Informations supplémentaires -->
+        <div class="space-y-8">
+          <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Visitez notre établissement</h3>
+            <p class="text-gray-600 mb-6">
+              Nous organisons régulièrement des journées portes ouvertes pour vous permettre de 
+              découvrir nos installations, rencontrer notre équipe pédagogique et en savoir plus 
+              sur notre projet éducatif.
+            </p>
+            <div class="bg-primary/10 p-6 rounded-2xl">
+              <h4 class="text-lg font-bold text-gray-800 mb-3">Prochaine journée portes ouvertes</h4>
+              <p class="text-gray-600">
+                <strong>Date :</strong> Samedi 15 mars 2025<br>
+                <strong>Horaire :</strong> 9h00 - 13h00<br>
+                <strong>Lieu :</strong> Complexe Scolaire La Réussite, Owendo
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Documents d'inscription</h3>
+            <p class="text-gray-600 mb-6">
+              Pour préparer l'inscription de votre enfant, vous pouvez télécharger notre dossier 
+              d'inscription ou le retirer directement à l'accueil de l'établissement.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-xl transition-colors duration-300 flex items-center">
+                <span class="mr-2">📄</span>
+                Dossier d'inscription
+              </a>
+              <a href="classes.html" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl transition-colors duration-300">
+                Voir nos formations
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div>
+      <h3 class="text-xl md:text-2xl font-bold mb-4">La Réussite d'Owendo</h3>
+      <p class="text-gray-400">Inspirer, éduquer et transformer — au service de la jeunesse gabonaise.</p>
+    </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="about.html" class="hover:text-accent transition-colors">À propos</a></li>
+          <li><a href="classes.html" class="hover:text-accent transition-colors">Formations</a></li>
+          <li><a href="reglement.html" class="hover:text-accent transition-colors">Règlement</a></li>
+          <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Contact</h4>
+      <ul class="space-y-2 text-gray-400">
+        <li class="flex items-center"><span class="mr-2">📧</span> contact@reussite-owendo.com</li>
+        <li class="flex items-center"><span class="mr-2">📞</span> +241 94 74 10</li>
+        <li class="flex items-center"><span class="mr-2">📍</span> Razel, Owendo</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Suivez-nous</h4>
+      <div class="flex space-x-4">
+        <a href="#" aria-label="Facebook" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-accent transition-colors">f</a>
+        <a href="#" aria-label="Twitter" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-accent transition-colors">t</a>
+        <a href="#" aria-label="Instagram" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-accent transition-colors">i</a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
+    &copy; 2025 Complexe Scolaire La Réussite – Owendo. Tous droits réservés.
+  </div>
+</footer>
+
+<script>
+  // Gestion du menu mobile
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Fermer le menu mobile en cliquant à l'extérieur
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('nav') && !mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+
+  // Gestion du formulaire de contact
+  const contactForm = document.getElementById('contact-form');
+  
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Récupération des données du formulaire
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+    
+    // Simulation d'envoi (à remplacer par votre logique d'envoi réelle)
+    console.log('Données du formulaire:', data);
+    
+    // Message de succès
+    alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+    contactForm.reset();
+  });
+</script>
+</body>
+</html>
