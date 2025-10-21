@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contactez le Complexe Scolaire La Réussite à Owendo - Formulaire de contact, coordonnées et plan d'accès.">
+  <meta name="description" content="Contactez le Complexe Scolaire La Réussite à Owendo - WhatsApp, coordonnées et téléchargement de fiche d'inscription.">
   <title>Contact - Complexe Scolaire La Réussite - Owendo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -49,13 +49,14 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Styles pour le formulaire */
-    .form-input {
+    /* Styles pour le bouton WhatsApp */
+    .whatsapp-btn {
       transition: all 0.3s ease;
     }
 
-    .form-input:focus {
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
     }
 
     /* Améliorations pour mobile */
@@ -135,6 +136,29 @@
             </p>
           </div>
 
+          <!-- Bouton WhatsApp -->
+          <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+            <div class="flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                <span class="text-green-600 text-2xl">💬</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Contactez-nous sur WhatsApp</h3>
+              <p class="text-gray-600 mb-6">
+                Pour une réponse rapide, contactez-nous directement sur WhatsApp
+              </p>
+              <!-- REMPLACER LE NUMÉRO DE TÉLÉPHONE CI-DESSOUS PAR LE VOTRE -->
+              <a href="https://wa.me/241947410?text=Bonjour%2C%20je%20suis%20intéressé(e)%20par%20le%20Complexe%20Scolaire%20La%20Réussite"
+                 class="whatsapp-btn bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center w-full max-w-xs">
+                <span class="mr-2 text-xl">📱</span>
+                Envoyer un message
+              </a>
+              <p class="text-sm text-gray-500 mt-3">
+                <!-- REMPLACER LE NUMÉRO CI-DESSOUS PAR LE VOTRE -->
+                <strong>+241 94 74 10</strong>
+              </p>
+            </div>
+          </div>
+
           <!-- Cartes d'information -->
           <div class="space-y-6">
             <div class="contact-card bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
@@ -156,6 +180,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-800 mb-2">Téléphone</h3>
+                  <!-- REMPLACER LES NUMÉROS CI-DESSOUS PAR LES VÔTRES -->
                   <p class="text-gray-600">+241 94 74 10<br>+241 11 74 10 74</p>
                 </div>
               </div>
@@ -168,6 +193,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                  <!-- REMPLACER LES ADRESSES EMAIL CI-DESSOUS PAR LES VÔTRES -->
                   <p class="text-gray-600">contact@reussite-owendo.com<br>direction@reussite-owendo.com</p>
                 </div>
               </div>
@@ -187,63 +213,62 @@
           </div>
         </div>
 
-        <!-- Formulaire de contact -->
+        <!-- Section Documents d'inscription -->
         <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl">
-          <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h3>
-          <form id="contact-form" class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label for="prenom" class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
-                <input type="text" id="prenom" name="prenom" required
-                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Préparer l'inscription</h3>
+          <p class="text-gray-600 mb-8">
+            Téléchargez notre fiche d'inscription et préparez les documents nécessaires pour inscrire votre enfant.
+          </p>
+
+          <!-- Fiche d'inscription -->
+          <div class="bg-blue-50 p-6 rounded-2xl mb-8">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-600 text-xl">📄</span>
               </div>
               <div>
-                <label for="nom" class="block text-sm font-medium text-gray-700 mb-2">Nom *</label>
-                <input type="text" id="nom" name="nom" required
-                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                <h4 class="text-lg font-bold text-gray-800">Fiche d'inscription</h4>
+                <p class="text-sm text-gray-600">Document à remplir pour l'inscription</p>
               </div>
             </div>
-
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-              <input type="email" id="email" name="email" required
-                     class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
-            </div>
-
-            <div>
-              <label for="telephone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
-              <input type="tel" id="telephone" name="telephone"
-                     class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
-            </div>
-
-            <div>
-              <label for="sujet" class="block text-sm font-medium text-gray-700 mb-2">Sujet *</label>
-              <select id="sujet" name="sujet" required
-                      class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
-                <option value="">Choisissez un sujet</option>
-                <option value="inscription">Demande d'inscription</option>
-                <option value="renseignement">Renseignement</option>
-                <option value="visite">Demande de visite</option>
-                <option value="partenariat">Partenariat</option>
-                <option value="autre">Autre</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-              <textarea id="message" name="message" rows="5" required
-                        class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"></textarea>
-            </div>
-
-            <button type="submit"
-                    class="w-full bg-accent hover:bg-yellow-400 text-primary font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
-              Envoyer le message
-            </button>
-
-            <p class="text-sm text-gray-500 text-center">
-              * Champs obligatoires. Nous vous répondrons dans les plus brefs délais.
+            <p class="text-gray-600 mb-4">
+              Téléchargez notre fiche d'inscription au format PDF. Vous pouvez l'imprimer, la remplir et nous la ramener complétée.
             </p>
-          </form>
+            <!-- REMPLACER LE LIEN CI-DESSOUS PAR LE CHEMIN VERS VOTRE FICHIER PDF -->
+            <a href="documents/fiche-inscription-la-reussite.pdf" 
+               class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-300 flex items-center justify-center w-full"
+               download="Fiche_Inscription_La_Reussite.pdf">
+              <span class="mr-2">📥</span>
+              Télécharger la fiche d'inscription
+            </a>
+          </div>
+
+          <!-- Documents requis -->
+          <div class="bg-yellow-50 p-6 rounded-2xl">
+            <h4 class="text-lg font-bold text-gray-800 mb-4">Documents à fournir</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                Fiche d'inscription dûment remplie
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                Photocopie de l'acte de naissance
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                Dernier bulletin de notes
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                4 photos d'identité récentes
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                Certificat de scolarité (pour les nouveaux)
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -308,18 +333,23 @@
           </div>
 
           <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">Documents d'inscription</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Besoin d'informations ?</h3>
             <p class="text-gray-600 mb-6">
-              Pour préparer l'inscription de votre enfant, vous pouvez télécharger notre dossier 
-              d'inscription ou le retirer directement à l'accueil de l'établissement.
+              N'hésitez pas à nous contacter pour toute question concernant nos formations, 
+              les frais de scolarité ou les procédures d'inscription.
             </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="#" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-xl transition-colors duration-300 flex items-center">
-                <span class="mr-2">📄</span>
-                Dossier d'inscription
+            <div class="flex flex-col gap-4">
+              <!-- REMPLACER LE NUMÉRO DE TÉLÉPHONE CI-DESSOUS PAR LE VOTRE -->
+              <a href="tel:+241947410" 
+                 class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center">
+                <span class="mr-2">📞</span>
+                Appeler l'école
               </a>
-              <a href="classes.html" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl transition-colors duration-300">
-                Voir nos formations
+              <!-- REMPLACER L'ADRESSE EMAIL CI-DESSOUS PAR LA VÔTRE -->
+              <a href="mailto:contact@reussite-owendo.com?subject=Demande d'information&body=Bonjour, je souhaiterais obtenir des informations sur votre établissement."
+                 class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center">
+                <span class="mr-2">📧</span>
+                Envoyer un email
               </a>
             </div>
           </div>
@@ -347,6 +377,7 @@
     <div>
       <h4 class="text-lg font-semibold mb-4">Contact</h4>
       <ul class="space-y-2 text-gray-400">
+        <!-- REMPLACER LES COORDONNÉES CI-DESSOUS PAR LES VÔTRES -->
         <li class="flex items-center"><span class="mr-2">📧</span> contact@reussite-owendo.com</li>
         <li class="flex items-center"><span class="mr-2">📞</span> +241 94 74 10</li>
         <li class="flex items-center"><span class="mr-2">📍</span> Razel, Owendo</li>
@@ -382,22 +413,25 @@
     }
   });
 
-  // Gestion du formulaire de contact
-  const contactForm = document.getElementById('contact-form');
-  
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Récupération des données du formulaire
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Simulation d'envoi (à remplacer par votre logique d'envoi réelle)
-    console.log('Données du formulaire:', data);
-    
-    // Message de succès
-    alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
-    contactForm.reset();
+  // Animation pour les cartes de contact
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'fadeIn 1s ease-in-out';
+        entry.target.style.opacity = '1';
+      }
+    });
+  }, observerOptions);
+
+  // Observer les cartes de contact
+  document.querySelectorAll('.contact-card').forEach(card => {
+    card.style.opacity = '0';
+    observer.observe(card);
   });
 </script>
 </body>
